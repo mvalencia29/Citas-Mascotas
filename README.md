@@ -1,2 +1,4 @@
 # Citas-Mascotas
-Proyecto para registrar citas y poder verlas.
+Proyecto de practica para registrar citas y poder verlas.
+Se uso React, Bootstrap y LocalStorage.
+
