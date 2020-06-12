@@ -1,15 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Topbar from "./components/Topbar";
 import { Row, Col } from "react-bootstrap";
 import Formulario from "./components/Formulario";
 import Citas from "./components/Citas";
 
 function App() {
-  const [citas, setCitas] = useState([]);
+  let citasIniciales = JSON.parse(localStorage.getItem("citas"));
+  if (!citasIniciales) {
+    citasIniciales = [];
+  }
+
+  const [citas, setCitas] = useState(citasIniciales);
 
   const crearCitas = (cita) => {
     setCitas([...citas, cita]);
   };
+
+  useEffect(() => {
+    if (citas) {
+      localStorage.setItem("citas", JSON.stringify(citas));
+    } else {
+      localStorage.setItem("citas", JSON.stringify([]));
+    }
+  }, [citas]);
 
   const eliminarCita = (id) => {
     const nuevasCitas = citas.filter((cita) => cita.id !== id);
