@@ -20,3 +20,34 @@ code {
 .topbar-container > h1 {
   color: white;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-formulario * .card-title,
+.container-formulario * .form-label {
+  color: white;
+}
+
+.container-formulario * .card-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#btn-guardar:hover {
+  background: linear-gradient(90deg, rgba(0,255,149,1) 0%, rgba(9,0,159,1) 100%);
+  font-weight: 500;
+}
+
+#btn-guardar {
+  background: linear-gradient(10deg, rgba(9,0,159,1) 0%, rgba(0,255,149,1) 100%);
+  font-weight: 500;
+}
+
+.container-citas{
+  
+}
