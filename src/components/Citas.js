@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Cita from "./Cita";
 
-const Citas = () => {
+const Citas = ({ citas, eliminarCita }) => {
+  
+  const title = citas.lenght === 0 ? "No hay Citas" : "Administra tus citas";
+
   return (
     <div className="container-citas">
-      <Title title="Administra tus citas" />
-      <Cita />
+      <Title title={title} />
+      {citas.map((cita) => (
+        <Cita cita={cita} key={cita.id} eliminarCita={eliminarCita} />
+      ))}
     </div>
   );
 };

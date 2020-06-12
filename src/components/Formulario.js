@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
 import { v4 as uuid } from "uuid";
 
-const Formulario = () => {
+const Formulario = ({ crearCitas }) => {
   const [cita, setCita] = useState({
     mascota: "",
     raza: "",
@@ -34,15 +34,19 @@ const Formulario = () => {
     }
 
     //Asignar un ID
-    setCita({
-      ...cita,
-      id: uuid(),
-    });
+    cita.id = uuid();
 
     //Crear Cita
-    
+    crearCitas(cita);
 
     //Reiniciar Formulario
+    setCita({
+      mascota: "",
+      raza: "",
+      descripcionMascota: "",
+      dueño: "",
+      sintomas: "",
+    });
   };
 
   return (
