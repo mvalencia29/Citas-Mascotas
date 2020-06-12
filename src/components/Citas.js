@@ -1,10 +1,11 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import Cita from "./Cita";
 
 const Citas = () => {
   return (
-    <div className="container-citas">  
-          <Title title={10} />
+    <div className="container-citas">
+      <Title title="Administra tus citas" />
+      <Cita />
     </div>
   );
 };
@@ -12,11 +13,7 @@ const Citas = () => {
 const Title = (props) => {
   const { title } = props;
 
-  return (
-    <div>
-      <h5 style={{ textAlign: "center"}}>{title}</h5>
-    </div>
-  );
+  return <h5 style={{ textAlign: "center", marginBottom: "32px" }}>{title}</h5>;
 };
 
 export default Citas;

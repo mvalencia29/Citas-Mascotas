@@ -38,16 +38,21 @@ code {
   margin-bottom: 10px;
 }
 
-#btn-guardar:hover {
+.btn:hover {
   background: linear-gradient(90deg, rgba(0,255,149,1) 0%, rgba(9,0,159,1) 100%);
-  font-weight: 500;
 }
 
-#btn-guardar {
+.btn {
   background: linear-gradient(10deg, rgba(9,0,159,1) 0%, rgba(0,255,149,1) 100%);
   font-weight: 500;
 }
 
 .container-citas{
-  
+  min-width: 400px;
+  padding: 1.25rem;
+}
+
+.container-citas > h5{
+  color: white;
+  font-size: 22px;
 }

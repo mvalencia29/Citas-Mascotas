@@ -10,24 +10,24 @@ const Formulario = () => {
       <Card.Body>
         <Card.Title>Crear Cita</Card.Title>
         <Form.Group>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Nombre Mascota</Form.Label>
+          <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Raza</Form.Label>
+          <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Descripcion de la Mascota</Form.Label>
+          <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Nombre Dueño</Form.Label>
+          <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Sintomas</Form.Label>
+          <Form.Control as="textarea" rows="3" />
         </Form.Group>
         <Button
           variant="primary"
