@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# Citas-Mascotas
+Proyecto de practica para registrar citas y poder verlas.
+Se uso React, Bootstrap y LocalStorage.
+
+>>>>>>> d0e012c2fe7fa58d9ff1f3ecff2911d64a57c74d
