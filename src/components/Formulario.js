@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
+import { v4 as uuid } from "uuid";
 
 const Formulario = () => {
   const [cita, setCita] = useState({
@@ -10,11 +11,38 @@ const Formulario = () => {
     sintomas: "",
   });
 
+  const { mascota, raza, descripcionMascota, dueño, sintomas } = cita;
+
   const HandleChange = (e) => {
     setCita({
       ...cita,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const HandleClick = () => {
+    //Validacion
+    if (
+      mascota.trim() === "" ||
+      raza.trim() === "" ||
+      descripcionMascota.trim() === "" ||
+      dueño.trim() === "" ||
+      sintomas.trim() === ""
+    ) {
+      alert("Por favor Completa los campos");
+      return;
+    }
+
+    //Asignar un ID
+    setCita({
+      ...cita,
+      id: uuid(),
+    });
+
+    //Crear Cita
+    
+
+    //Reiniciar Formulario
   };
 
   return (
@@ -28,7 +56,7 @@ const Formulario = () => {
           <Form.Label>Nombre Mascota</Form.Label>
           <Form.Control
             onChange={HandleChange}
-            value={cita.mascota}
+            value={mascota}
             name="mascota"
             type="text"
           />
@@ -38,7 +66,7 @@ const Formulario = () => {
           <Form.Control
             onChange={HandleChange}
             name="raza"
-            value={cita.raza}
+            value={raza}
             type="text"
           />
         </Form.Group>
@@ -47,7 +75,7 @@ const Formulario = () => {
           <Form.Control
             onChange={HandleChange}
             name="descripcionMascota"
-            value={cita.descripcionMascota}
+            value={descripcionMascota}
             type="text"
           />
         </Form.Group>
@@ -56,7 +84,7 @@ const Formulario = () => {
           <Form.Control
             onChange={HandleChange}
             name="dueño"
-            value={cita.dueño}
+            value={dueño}
             type="text"
           />
         </Form.Group>
@@ -65,7 +93,7 @@ const Formulario = () => {
           <Form.Control
             onChange={HandleChange}
             name="sintomas"
-            value={cita.sintomas}
+            value={sintomas}
             as="textarea"
             rows="3"
           />
@@ -75,6 +103,7 @@ const Formulario = () => {
           type="button"
           id="btn-guardar"
           style={{ width: "100%", marginTop: "10px", border: "none" }}
+          onClick={HandleClick}
         >
           Crear Cita
         </Button>
